@@ -7,8 +7,10 @@
 </head>
 <body>
     <!-- HTTP Method/Verb: GET, POST, PUT, DELETE... -->
-    
-    <button hx-get="data.html" hx-target="#data" >Load data!</button>
+
+    <!-- hx-swap: innerHTML, outerHTML, beforebegin(before div), afterend(after div), afterbegin(first child), beforeend(last child) -->
+
+    <button hx-get="data.html" hx-target="#data" hx-swap="afterbegin">Load data!</button>
 
     <div id="data">
         place
