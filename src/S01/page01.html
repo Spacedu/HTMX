@@ -10,11 +10,18 @@
 
     <!-- hx-swap: innerHTML, outerHTML, beforebegin(before div), afterend(after div), afterbegin(first child), beforeend(last child) -->
 
-    <button hx-get="data.html" hx-target="#data" hx-swap="afterbegin">Load data!</button>
-
-    <div id="data">
+    <!--
+        hx-trigger: click, dblclick, mouseenter, mouseleave, mouseover....input, keyup, keypress
+        htmx: every 3s (setInterval), revealed
+    -->
+    <div>
+        <button hx-trigger="click[ctrlKey] once delay:300ms from:div" hx-get="data.html" hx-target="#data" hx-swap="afterbegin swap:300ms">Load data!</button>
+    </div>
+    <div id="data" style="height: 1000px; border: 1px solid black">
         place
     </div>
+
+    <div style="padding: 10px; background-color: red" hx-trigger="revealed" hx-get="data.html" hx-target="#data" hx-swap="beforeend">Content</div>
 
     <!-- Install HTMX - CDN(cache) -->
     <script src="https://unpkg.com/htmx.org@2.0.8/dist/htmx.min.js"></script>
