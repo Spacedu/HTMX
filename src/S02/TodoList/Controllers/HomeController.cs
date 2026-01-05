@@ -7,12 +7,12 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
-        return View();
+        return RedirectToAction("Login");
     }
 
     public IActionResult Login()
     {
-        return Content("Page Login");
+        return View();
     }
 
     public IActionResult Register()
