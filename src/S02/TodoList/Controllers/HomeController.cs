@@ -9,4 +9,14 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    public IActionResult Login()
+    {
+        return Content("Page Login");
+    }
+
+    public IActionResult Register()
+    {
+        return Content("Page Register");
+    }
 }
