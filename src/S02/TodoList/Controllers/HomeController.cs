@@ -17,6 +17,6 @@ public class HomeController : Controller
 
     public IActionResult Register()
     {
-        return Content("Page Register");
+        return View();
     }
 }
